@@ -28,8 +28,7 @@ CBR600 F4i and converts riders into wrap inquiries.
 
 - **Brand name:** "Apex Skin Studio" is a placeholder. Search the `.html`
   files for `Apex Skin Studio` and update the `.brand` block + footer + `<title>`s.
-- **Media:** Video/image blocks use CSS placeholders. Swap `.media-ph`,
-  `.video-card`, and `.hero__media` for real `<img>`/`<video>`/YouTube embeds.
+- **Media:** Lifestyle images live in `public/images/` (hero, garage scenes, before/after wraps, episode thumbnails, BTS clips). Swap any file in place to update visuals.
 - **Links:** Social links (`href="#"`) and "Watch on YouTube" buttons need real URLs.
 - **Forms:** The apply wizard and newsletter fake-submit client-side. Wire a real
   endpoint/email service in `script.js` (see the `NOTE:` comments).
