@@ -39,10 +39,43 @@ CBR600 F4i and converts riders into wrap inquiries.
 All accent colors and type live in the `:root` block of `styles.css`
 (metallic green, chrome/silver, graphite). Change them in one place.
 
-## Run
+## Run locally
 
-It's a static site — open `index.html` in a browser, or serve the folder:
+Static files live in `public/`. Preview with the Cloudflare Workers dev server:
 
 ```bash
-python3 -m http.server 8000
+npm install
+npm run dev
 ```
+
+Or serve the folder directly:
+
+```bash
+python3 -m http.server 8000 --directory public
+```
+
+## Deploy (Cloudflare Workers)
+
+This site deploys as a [Cloudflare Worker with static assets](https://developers.cloudflare.com/workers/static-assets/).
+
+### One-time Cloudflare setup
+
+1. Create a [Cloudflare API token](https://dash.cloudflare.com/profile/api-tokens) with **Workers Scripts: Edit** permission.
+2. Copy your [Account ID](https://developers.cloudflare.com/fundamentals/account/find-account-and-zone-ids/) from the Cloudflare dashboard.
+3. In GitHub → **Settings → Secrets and variables → Actions**, add:
+   - `CLOUDFLARE_API_TOKEN`
+   - `CLOUDFLARE_ACCOUNT_ID`
+
+### Automatic deploys
+
+Pushes to `main` run `.github/workflows/deploy.yml` and deploy via Wrangler.
+
+### Manual deploy
+
+```bash
+npm install
+npx wrangler login   # first time only
+npm run deploy
+```
+
+After deploy, Wrangler prints the `*.workers.dev` URL. Attach a custom domain in the Cloudflare dashboard under **Workers & Pages → vinyl-wrap-proj → Settings → Domains & Routes**.
