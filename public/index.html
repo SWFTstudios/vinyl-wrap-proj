@@ -67,9 +67,8 @@
     <!-- ============ HERO ============ -->
     <section class="hero">
       <div class="hero__media" aria-hidden="true">
-        <!-- Placeholder cinematic backdrop. Swap for <video autoplay muted loop poster>. -->
+        <img class="hero__photo" src="images/hero.jpg" alt="" width="1600" height="900" fetchpriority="high" />
         <div class="hero__media-grid"></div>
-        <div class="hero__silhouette"></div>
       </div>
 
       <div class="container hero__inner">
@@ -126,9 +125,9 @@
           </div>
 
           <div class="split__media reveal" data-delay="1">
-            <div class="media-ph" style="aspect-ratio:4/5;">
+            <div class="media-ph has-img" style="aspect-ratio:4/5;">
+              <img src="images/garage-day-001.jpg" alt="Builder in the garage on day one of the F4i project" loading="lazy" width="1200" height="1500" />
               <span class="media-ph__tag">Garage · Day 001</span>
-              <svg class="media-ph__icon" width="64" height="64" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 7l1.5 12h13L20 7M4 7l1-2h14l1 2M9 11v4M15 11v4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
             </div>
           </div>
         </div>
@@ -146,6 +145,7 @@
         <div class="video-feature">
           <!-- Featured video card (placeholder for a YouTube embed) -->
           <a class="video-card reveal" href="watch.html" aria-label="Play the latest episode">
+            <img class="video-card__img" src="images/episode-wrap.jpg" alt="Applying metallic green vinyl wrap to the F4i fairings" loading="lazy" width="1600" height="900" />
             <span class="video-card__label">Episode 07 · The Wrap</span>
             <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
             <span class="video-card__dur">18:42</span>
@@ -198,16 +198,15 @@
             <span class="eyebrow">Before / After</span>
             <h2 class="section-title">Rolling art,<br>panel by panel.</h2>
           </div>
-          <p class="section-lead">Placeholder transformations from the build log. Real
-          reveals drop with each episode.</p>
+          <p class="section-lead">Real transformations from the F4i build log. More reveals drop with each episode.</p>
         </div>
 
         <div class="grid grid--3">
           <!-- Card 1 -->
           <article class="ba-card reveal">
             <div class="ba-card__frame">
-              <div class="ba-half ba-half--before"><span>Before</span></div>
-              <div class="ba-half ba-half--after"><span>After</span></div>
+              <div class="ba-half ba-half--before"><img src="images/f4i-before.jpg" alt="F4i before wrap — worn factory silver fairings" loading="lazy" width="800" height="600" /><span>Before</span></div>
+              <div class="ba-half ba-half--after"><img src="images/f4i-after.jpg" alt="F4i after wrap — metallic green finish" loading="lazy" width="800" height="600" /><span>After</span></div>
             </div>
             <div class="ba-card__body">
               <h4>The F4i · Metallic Green</h4>
@@ -218,8 +217,8 @@
           <!-- Card 2 -->
           <article class="ba-card reveal" data-delay="1">
             <div class="ba-card__frame">
-              <div class="ba-half ba-half--before"><span>Before</span></div>
-              <div class="ba-half ba-half--after"><span>After</span></div>
+              <div class="ba-half ba-half--before"><img src="images/tank-before.jpg" alt="Tank and tail before — scuffed OEM paint" loading="lazy" width="800" height="600" /><span>Before</span></div>
+              <div class="ba-half ba-half--after"><img src="images/tank-after.jpg" alt="Tank and tail after — gloss black wrap" loading="lazy" width="800" height="600" /><span>After</span></div>
             </div>
             <div class="ba-card__body">
               <h4>Tank &amp; Tail · Gloss Black</h4>
@@ -230,8 +229,8 @@
           <!-- Card 3 -->
           <article class="ba-card reveal" data-delay="2">
             <div class="ba-card__frame">
-              <div class="ba-half ba-half--before"><span>Before</span></div>
-              <div class="ba-half ba-half--after"><span>After</span></div>
+              <div class="ba-half ba-half--before"><img src="images/livery-before.jpg" alt="Fairings before — blank plastics on the bench" loading="lazy" width="800" height="600" /><span>Before</span></div>
+              <div class="ba-half ba-half--after"><img src="images/livery-after.jpg" alt="Fairings after — full race livery wrap" loading="lazy" width="800" height="600" /><span>After</span></div>
             </div>
             <div class="ba-card__body">
               <h4>Fairing Set · Race Livery</h4>
@@ -317,8 +316,8 @@
       <div class="container">
         <div class="founder">
           <div class="founder__portrait reveal">
+            <img src="images/founder.jpg" alt="The founder in the Apex Skin Studio garage" loading="lazy" width="1200" height="1600" />
             <span class="media-ph__tag">The builder</span>
-            <svg width="72" height="72" viewBox="0 0 24 24" fill="none" style="opacity:.4;margin-bottom:2rem;"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
           </div>
           <div class="founder__body reveal" data-delay="1">
             <span class="eyebrow">Who's behind it</span>
