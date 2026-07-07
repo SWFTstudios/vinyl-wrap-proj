@@ -23,7 +23,7 @@ transparent wrap process.
 - Mobile-first and fully responsive.
 - Smooth scroll, `IntersectionObserver` scroll-reveal, accordion FAQ, and a
   multi-step form wizard — all in `script.js`.
-- Fonts: Anton (display) + Inter (body) via Google Fonts, with system fallbacks.
+- Fonts: Arimo via Google Fonts, with system fallbacks.
 
 ## Placeholders to replace before launch
 
