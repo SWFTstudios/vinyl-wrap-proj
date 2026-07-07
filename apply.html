@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<!-- APEX SKIN STUDIO — Apply / Onboarding wizard. Rebrand: replace "Apex Skin Studio". -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apply for a Wrap — Apex Skin Studio</title>
+  <meta name="description" content="Apply to have your motorcycle wrapped. A quick, guided multi-step request: rider info, bike details, wrap goals, style, timeline, and content consent." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" data-nav>
+    <div class="nav__inner">
+      <a class="brand" href="index.html" aria-label="Apex Skin Studio home">
+        <span class="brand__mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3L3 20h4l5-9 5 9h4L12 3z" fill="currentColor"/></svg></span>
+        <span>Apex Skin<br><small>STUDIO</small></span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav__links">
+          <li><a href="index.html" data-nav-link>Home</a></li>
+          <li><a href="watch.html" data-nav-link>Watch</a></li>
+          <li><a href="services.html" data-nav-link>Wrap Services</a></li>
+          <li><a href="about.html" data-nav-link>About</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn--primary nav__cta" href="apply.html">Apply for a wrap</a>
+      <button class="nav__toggle" data-nav-toggle aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+  <div class="mobile-menu" id="mobile-menu" data-mobile-menu>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="watch.html">Watch</a></li>
+      <li><a href="services.html">Wrap Services</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <a class="btn btn--primary btn--wide" href="apply.html">Apply for a wrap</a>
+  </div>
+
+  <main>
+
+    <!-- ============ PAGE HERO ============ -->
+    <section class="page-hero" style="padding-bottom:clamp(2rem,4vw,3rem);">
+      <div class="container page-hero__inner">
+        <span class="eyebrow reveal">Apply for a wrap</span>
+        <h1 class="reveal" data-delay="1">Let's build your<br>bike's next chapter.</h1>
+        <p class="reveal" data-delay="2">Five quick steps. No pressure, no obligation — just enough for me to
+        understand your bike and come back with an honest quote.</p>
+      </div>
+    </section>
+
+    <!-- ============ WIZARD ============ -->
+    <section class="section" style="padding-top:clamp(2rem,5vw,3.5rem);">
+      <div class="container">
+
+        <!-- data-wizard: the multi-step form controller lives in script.js -->
+        <form class="wizard" data-wizard novalidate>
+
+          <div data-wizard-body>
+            <!-- Progress indicator -->
+            <div class="wizard__progress">
+              <div class="wizard__bar"><span data-progress-bar></span></div>
+              <div class="wizard__meta">
+                <span>Step <b data-step-current>1</b> / <span data-step-total>7</span></span>
+                <span data-step-name>Rider info</span>
+              </div>
+            </div>
+
+            <!-- STEP 1 — RIDER INFO -->
+            <fieldset class="step-panel is-active" data-step-title="Rider info">
+              <h2>Who's the rider?</h2>
+              <p class="step-panel__sub">The basics so I can reach you with a quote.</p>
+
+              <div class="field-row cols-2">
+                <div class="field">
+                  <label for="name">Full name *</label>
+                  <input type="text" id="name" name="name" placeholder="Your name" required autocomplete="name" />
+                  <div class="field__error">Please enter your name.</div>
+                </div>
+                <div class="field">
+                  <label for="email">Email *</label>
+                  <input type="email" id="email" name="email" placeholder="you@email.com" required autocomplete="email" />
+                  <div class="field__error">Enter a valid email.</div>
+                </div>
+              </div>
+              <div class="field-row cols-2">
+                <div class="field">
+                  <label for="phone">Phone *</label>
+                  <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555" required autocomplete="tel" />
+                  <div class="field__error">Please enter a phone number.</div>
+                </div>
+                <div class="field">
+                  <label for="instagram">Instagram handle</label>
+                  <input type="text" id="instagram" name="instagram" placeholder="@yourhandle" />
+                </div>
+              </div>
+            </fieldset>
+
+            <!-- STEP 2 — BIKE INFO -->
+            <fieldset class="step-panel" data-step-title="Bike info">
+              <h2>Tell me about the bike.</h2>
+              <p class="step-panel__sub">The machine we'll be transforming.</p>
+
+              <div class="field-row cols-3">
+                <div class="field">
+                  <label for="year">Year *</label>
+                  <input type="text" id="year" name="year" placeholder="2002" required inputmode="numeric" />
+                  <div class="field__error">Required.</div>
+                </div>
+                <div class="field">
+                  <label for="make">Make *</label>
+                  <input type="text" id="make" name="make" placeholder="Honda" required />
+                  <div class="field__error">Required.</div>
+                </div>
+                <div class="field">
+                  <label for="model">Model *</label>
+                  <input type="text" id="model" name="model" placeholder="CBR600 F4i" required />
+                  <div class="field__error">Required.</div>
+                </div>
+              </div>
+              <div class="field-row cols-2">
+                <div class="field">
+                  <label for="color">Current color</label>
+                  <input type="text" id="color" name="color" placeholder="Factory silver" />
+                </div>
+                <div class="field">
+                  <label for="condition">Fairing condition</label>
+                  <select id="condition" name="condition">
+                    <option value="">Select condition…</option>
+                    <option>Excellent — clean, no damage</option>
+                    <option>Good — minor scuffs / fading</option>
+                    <option>Fair — some scratches or scuffs</option>
+                    <option>Rough — cracks / needs repair</option>
+                    <option>Not sure</option>
+                  </select>
+                </div>
+              </div>
+            </fieldset>
+
+            <!-- STEP 3 — WRAP GOALS (multi-select) -->
+            <fieldset class="step-panel" data-step-title="Wrap goals">
+              <h2>What do you want wrapped?</h2>
+              <p class="step-panel__sub">Pick anything that applies — you can choose more than one.</p>
+
+              <div class="choices cols-2">
+                <label class="choice"><input type="checkbox" name="goal" value="full" data-label="Full bike" /><span class="choice__box"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4 4L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><span class="choice__title">Full bike</span><span class="choice__desc">Every panel, complete change</span></span></label>
+                <label class="choice"><input type="checkbox" name="goal" value="fairings" data-label="Fairings only" /><span class="choice__box"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4 4L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><span class="choice__title">Fairings only</span><span class="choice__desc">Uppers, lowers, mids</span></span></label>
+                <label class="choice"><input type="checkbox" name="goal" value="tank" data-label="Tank only" /><span class="choice__box"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4 4L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><span class="choice__title">Tank only</span><span class="choice__desc">Single accent piece</span></span></label>
+                <label class="choice"><input type="checkbox" name="goal" value="helmet" data-label="Helmet / small parts" /><span class="choice__box"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4 4L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><span class="choice__title">Helmet / small parts</span><span class="choice__desc">Detail work</span></span></label>
+                <label class="choice"><input type="checkbox" name="goal" value="unsure" data-label="Not sure yet" /><span class="choice__box"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4 4L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><span class="choice__title">Not sure yet</span><span class="choice__desc">Help me figure it out</span></span></label>
+              </div>
+            </fieldset>
+
+            <!-- STEP 4 — STYLE DIRECTION (multi-select) -->
+            <fieldset class="step-panel" data-step-title="Style direction">
+              <h2>What's the vibe?</h2>
+              <p class="step-panel__sub">The finish and direction you're drawn to. Pick as many as you like.</p>
+
+              <div class="choices cols-3">
+                <label class="choice"><input type="checkbox" name="style" value="gloss" data-label="Gloss" /><span class="choice__box"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4 4L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="choice__title">Gloss</span></label>
+                <label class="choice"><input type="checkbox" name="style" value="metallic" data-label="Metallic" /><span class="choice__box"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4 4L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="choice__title">Metallic</span></label>
+                <label class="choice"><input type="checkbox" name="style" value="matte" data-label="Matte" /><span class="choice__box"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4 4L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="choice__title">Matte</span></label>
+                <label class="choice"><input type="checkbox" name="style" value="chrome" data-label="Chrome" /><span class="choice__box"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4 4L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="choice__title">Chrome</span></label>
+                <label class="choice"><input type="checkbox" name="style" value="colorshift" data-label="Color shift" /><span class="choice__box"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4 4L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="choice__title">Color shift</span></label>
+                <label class="choice"><input type="checkbox" name="style" value="livery" data-label="Racing livery" /><span class="choice__box"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4 4L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="choice__title">Racing livery</span></label>
+                <label class="choice"><input type="checkbox" name="style" value="oem" data-label="Clean OEM+" /><span class="choice__box"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4 4L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="choice__title">Clean OEM+</span></label>
+              </div>
+            </fieldset>
+
+            <!-- STEP 5 — TIMELINE & BUDGET -->
+            <fieldset class="step-panel" data-step-title="Timeline &amp; budget">
+              <h2>Timeline &amp; budget.</h2>
+              <p class="step-panel__sub">Helps me plan the queue and match the right materials.</p>
+
+              <div class="field">
+                <label>When do you want it done?</label>
+                <div class="choices cols-2">
+                  <label class="choice"><input type="radio" name="timeline" value="asap" data-label="ASAP" /><span class="choice__box"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4 4L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="choice__title">ASAP</span></label>
+                  <label class="choice"><input type="radio" name="timeline" value="2-4wk" data-label="2–4 weeks" /><span class="choice__box"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4 4L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="choice__title">2–4 weeks</span></label>
+                  <label class="choice"><input type="radio" name="timeline" value="1-2mo" data-label="1–2 months" /><span class="choice__box"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4 4L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="choice__title">1–2 months</span></label>
+                  <label class="choice"><input type="radio" name="timeline" value="flexible" data-label="Flexible" /><span class="choice__box"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4 4L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="choice__title">Flexible</span></label>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="budget">Budget range</label>
+                <select id="budget" name="budget">
+                  <option value="">Select a range…</option>
+                  <option>Under $300</option>
+                  <option>$300 – $600</option>
+                  <option>$600 – $1,000</option>
+                  <option>$1,000 – $1,500</option>
+                  <option>$1,500+</option>
+                  <option>Not sure yet</option>
+                </select>
+              </div>
+            </fieldset>
+
+            <!-- STEP 6 — CONTENT CONSENT -->
+            <fieldset class="step-panel" data-step-title="Content consent">
+              <h2>Camera rolling?</h2>
+              <p class="step-panel__sub">Builds are often filmed for YouTube and BTS content. Totally optional —
+              your answer never changes your quote.</p>
+
+              <div class="choices">
+                <label class="choice"><input type="radio" name="consent" value="yes" data-label="Yes — film it" /><span class="choice__box"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4 4L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><span class="choice__title">Yes — film it</span><span class="choice__desc">I'm open to my bike being in a future episode / BTS</span></span></label>
+                <label class="choice"><input type="radio" name="consent" value="maybe" data-label="Maybe — let's talk" /><span class="choice__box"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4 4L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><span class="choice__title">Maybe — let's talk</span><span class="choice__desc">Open to it depending on the details</span></span></label>
+                <label class="choice"><input type="radio" name="consent" value="no" data-label="No filming" /><span class="choice__box"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4 4L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><span class="choice__title">No filming</span><span class="choice__desc">Please keep my bike off camera</span></span></label>
+              </div>
+
+              <div class="field" style="margin-top:1.6rem;">
+                <label for="notes">Anything else? (optional)</label>
+                <textarea id="notes" name="notes" placeholder="References, inspiration links, specific ideas, questions…"></textarea>
+              </div>
+            </fieldset>
+
+            <!-- STEP 7 — REVIEW -->
+            <fieldset class="step-panel" data-step-title="Review">
+              <h2>Look it over.</h2>
+              <p class="step-panel__sub">Make sure everything's right, then send it my way.</p>
+              <div class="review" data-review></div>
+              <p class="form-note" style="margin-top:1rem;">By submitting you agree to be contacted about your request. No spam — just your quote.</p>
+            </fieldset>
+
+            <!-- NAV BUTTONS -->
+            <div class="wizard__nav">
+              <button type="button" class="btn btn--ghost" data-prev hidden>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="transform:rotate(180deg);"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Back
+              </button>
+              <span style="flex:1;"></span>
+              <button type="button" class="btn btn--primary" data-next>
+                Continue
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <button type="submit" class="btn btn--primary" data-submit hidden>
+                Submit request
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </div>
+          </div><!-- /data-wizard-body -->
+
+          <!-- CONFIRMATION (shown after fake submit) -->
+          <div class="confirm" data-confirm>
+            <div class="confirm__check">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M4 12.5l5 5L20 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h2>Request received.</h2>
+            <p>Thanks for trusting me with your bike. I'll review the details and get back to you
+            personally with an honest quote and next steps — usually within a couple of days.</p>
+            <p class="form-note">This is a demo confirmation — no data was actually sent. Wire up a form
+            endpoint or email service in <code>script.js</code> to go live.</p>
+            <div class="hero__cta" style="justify-content:center;margin-top:1.6rem;">
+              <a class="btn btn--primary" href="watch.html">Watch while you wait</a>
+              <a class="btn btn--ghost" href="index.html">Back to home</a>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a class="brand" href="index.html"><span class="brand__mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3L3 20h4l5-9 5 9h4L12 3z" fill="currentColor"/></svg></span><span>Apex Skin<br><small>STUDIO</small></span></a>
+          <p>A motorcycle media brand and boutique wrap studio. Building a life around craft, discipline, creativity, and transformation. NYC · Jersey City · North Jersey.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.56 7.17c-.25-.9-.83-1.48-1.73-1.73C18.8 5.16 12 5.16 12 5.16s-6.8 0-7.83.28c-.9.25-1.48.83-1.73 1.73C2.16 8.2 2.16 12 2.16 12s0 3.8.28 4.83c.25.9.83 1.48 1.73 1.73 1.03.28 7.83.28 7.83.28s6.8 0 7.83-.28c.9-.25 1.48-.83 1.73-1.73.28-1.03.28-4.83.28-4.83s0-3.8-.28-4.83zM10 15V9l5.19 3L10 15z"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg></a>
+            <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 3c.3 2.3 1.7 3.9 4 4.2v3c-1.5 0-2.9-.4-4-1.2V15a6 6 0 11-6-6c.3 0 .7 0 1 .1v3.1a3 3 0 102 2.8V3h3z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer__col"><h5>Explore</h5><ul><li><a href="index.html">Home</a></li><li><a href="watch.html">Watch</a></li><li><a href="services.html">Wrap Services</a></li><li><a href="about.html">About</a></li></ul></div>
+        <div class="footer__col"><h5>Get started</h5><ul><li><a href="apply.html">Apply for a wrap</a></li><li><a href="services.html#pricing">Pricing</a></li><li><a href="services.html#faq">FAQ</a></li><li><a href="watch.html#newsletter">Follow the journey</a></li></ul></div>
+      </div>
+      <div class="footer__bottom"><span>© <span id="year"></span> Apex Skin Studio — placeholder brand name.</span><span>Built in the garage. Filmed on the way.</span></div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="script.js"></script>
+</body>
+</html>

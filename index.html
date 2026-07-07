@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<!--
+  ============================================================
+  APEX SKIN STUDIO — Home
+  ------------------------------------------------------------
+  BRAND NOTE: Replace every "Apex Skin Studio" string to rebrand.
+  Placeholder brand name only — swap logo mark + name in the
+  .brand block below and in the footer.
+  ============================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apex Skin Studio — Turning a first sportbike into a rolling story</title>
+  <meta name="description" content="A motorcycle media brand documenting the build, the wraps, and the ride. Watch the transformation of a 2002 Honda CBR600 F4i — then bring your bike next. NYC / Jersey City / North Jersey." />
+
+  <!-- Fonts: display (Anton) + body (Inter). Falls back to system fonts offline. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" data-nav>
+    <div class="nav__inner">
+      <a class="brand" href="index.html" aria-label="Apex Skin Studio home">
+        <span class="brand__mark" aria-hidden="true">
+          <!-- Simple chevron/apex mark -->
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 3L3 20h4l5-9 5 9h4L12 3z" fill="currentColor"/></svg>
+        </span>
+        <span>Apex Skin<br><small>STUDIO</small></span>
+      </a>
+
+      <nav aria-label="Primary">
+        <ul class="nav__links">
+          <li><a href="index.html" data-nav-link>Home</a></li>
+          <li><a href="watch.html" data-nav-link>Watch</a></li>
+          <li><a href="services.html" data-nav-link>Wrap Services</a></li>
+          <li><a href="about.html" data-nav-link>About</a></li>
+        </ul>
+      </nav>
+
+      <a class="btn btn--primary nav__cta" href="apply.html">Apply for a wrap</a>
+
+      <button class="nav__toggle" data-nav-toggle aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile slide-down menu -->
+  <div class="mobile-menu" id="mobile-menu" data-mobile-menu>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="watch.html">Watch</a></li>
+      <li><a href="services.html">Wrap Services</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <a class="btn btn--primary btn--wide" href="apply.html">Apply for a wrap</a>
+  </div>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="hero__media" aria-hidden="true">
+        <!-- Placeholder cinematic backdrop. Swap for <video autoplay muted loop poster>. -->
+        <div class="hero__media-grid"></div>
+        <div class="hero__silhouette"></div>
+      </div>
+
+      <div class="container hero__inner">
+        <span class="hero__badge reveal"><span class="dot"></span> New episode every build</span>
+
+        <h1 class="reveal" data-delay="1">
+          Turning my first<br>sportbike into a<br><span class="text-green">rolling story.</span>
+        </h1>
+
+        <p class="hero__sub reveal" data-delay="2">
+          Watch the build. Follow the wraps. Bring your bike next. One 2002 Honda
+          CBR600 F4i, a garage, and a promise: build a life I don't need a vacation from.
+        </p>
+
+        <div class="hero__cta reveal" data-delay="3">
+          <a class="btn btn--primary btn--lg" href="watch.html">
+            Watch the latest episode
+            <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="btn btn--ghost btn--lg" href="apply.html">Start your wrap request</a>
+        </div>
+
+        <div class="hero__meta reveal" data-delay="4">
+          <div><b>1</b><span>Bike, many lives</span></div>
+          <div><b>5-step</b><span>Wrap format</span></div>
+          <div><b>NJ / NYC</b><span>Based &amp; riding</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ORIGIN / STORY ============ -->
+    <section class="section" id="story">
+      <div class="container">
+        <div class="split story">
+          <div class="reveal">
+            <span class="eyebrow">The origin</span>
+            <h2 class="section-title">It started with<br>one bike and a<br>6am alarm.</h2>
+            <p class="story__lead">
+              A 2002 Honda CBR600 F4i. Faded fairings, high miles, and a lot of potential
+              nobody else could see.
+            </p>
+            <p>
+              This project isn't a wrap shop that happens to post online. It's the
+              opposite — a documentary about morning discipline, tearing down plastics,
+              prepping panels, and laying vinyl until a tired bike looks like it means
+              something again.
+            </p>
+            <p>
+              Every fairing swap, every squeegee pass, every reveal ride gets filmed.
+              Not to sell you anything — because the process is worth watching. The wrap
+              service grew out of people asking one question: <em>"Can you do that to mine?"</em>
+            </p>
+            <p class="sig">— Chapter one is the F4i.</p>
+          </div>
+
+          <div class="split__media reveal" data-delay="1">
+            <div class="media-ph" style="aspect-ratio:4/5;">
+              <span class="media-ph__tag">Garage · Day 001</span>
+              <svg class="media-ph__icon" width="64" height="64" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 7l1.5 12h13L20 7M4 7l1-2h14l1 2M9 11v4M15 11v4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ LATEST EPISODE ============ -->
+    <section class="section section--tight" id="latest" style="background:var(--bg-2);border-block:1px solid var(--line);">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Latest episode</span>
+          <h2 class="section-title">Watch the build,<br>not the ad.</h2>
+        </div>
+
+        <div class="video-feature">
+          <!-- Featured video card (placeholder for a YouTube embed) -->
+          <a class="video-card reveal" href="watch.html" aria-label="Play the latest episode">
+            <span class="video-card__label">Episode 07 · The Wrap</span>
+            <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+            <span class="video-card__dur">18:42</span>
+          </a>
+
+          <div class="video-meta reveal" data-delay="1">
+            <span class="eyebrow">F4i Series</span>
+            <h3>Metallic green over factory plastics</h3>
+            <p>
+              Full teardown to reveal ride. We pull every panel, clean 20 years of road
+              off the mounts, and lay a metallic green skin that changes the whole
+              personality of the bike. This is the one people keep asking about.
+            </p>
+            <a class="btn btn--primary" href="watch.html">
+              Watch on YouTube
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M10 15l5.19-3L10 9v6zm11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ THE FORMAT ============ -->
+    <section class="section" id="format">
+      <div class="container">
+        <div class="section-head section-head--split reveal">
+          <div class="section-head__copy">
+            <span class="eyebrow">The format</span>
+            <h2 class="section-title">Same five steps,<br>every single build.</h2>
+          </div>
+          <p class="section-lead">A repeatable ritual. It's what makes the channel a series
+          and the studio a process — not a gamble.</p>
+        </div>
+
+        <ol class="steps reveal" style="list-style:none;padding:0;margin:0;">
+          <li class="step"><span class="step__num">01</span><h4>Get the bike</h4><p>Roll it in, walk it, photograph the honest before.</p></li>
+          <li class="step"><span class="step__num">02</span><h4>Remove plastics</h4><p>Every fairing, tank, tail and fender comes off.</p></li>
+          <li class="step"><span class="step__num">03</span><h4>Clean &amp; prep</h4><p>Degrease, decontaminate, edge-map. Prep is the wrap.</p></li>
+          <li class="step"><span class="step__num">04</span><h4>Wrap</h4><p>Lay the skin. Heat, tuck, and post-heat every edge.</p></li>
+          <li class="step"><span class="step__num">05</span><h4>Reveal ride</h4><p>Reassemble, roll out, and film the photoshoot.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ BEFORE / AFTER SHOWCASE ============ -->
+    <section class="section section--tight" id="transformations" style="background:var(--bg-2);border-block:1px solid var(--line);">
+      <div class="container">
+        <div class="section-head section-head--split reveal">
+          <div class="section-head__copy">
+            <span class="eyebrow">Before / After</span>
+            <h2 class="section-title">Rolling art,<br>panel by panel.</h2>
+          </div>
+          <p class="section-lead">Placeholder transformations from the build log. Real
+          reveals drop with each episode.</p>
+        </div>
+
+        <div class="grid grid--3">
+          <!-- Card 1 -->
+          <article class="ba-card reveal">
+            <div class="ba-card__frame">
+              <div class="ba-half ba-half--before"><span>Before</span></div>
+              <div class="ba-half ba-half--after"><span>After</span></div>
+            </div>
+            <div class="ba-card__body">
+              <h4>The F4i · Metallic Green</h4>
+              <p>Factory silver to deep metallic green over full fairing set.</p>
+              <div class="ba-card__tags"><span class="tag">Full wrap</span><span class="tag">Metallic</span></div>
+            </div>
+          </article>
+          <!-- Card 2 -->
+          <article class="ba-card reveal" data-delay="1">
+            <div class="ba-card__frame">
+              <div class="ba-half ba-half--before"><span>Before</span></div>
+              <div class="ba-half ba-half--after"><span>After</span></div>
+            </div>
+            <div class="ba-card__body">
+              <h4>Tank &amp; Tail · Gloss Black</h4>
+              <p>Scuffed OEM paint reset to a clean, deep gloss black.</p>
+              <div class="ba-card__tags"><span class="tag">Tank + tail</span><span class="tag">Gloss</span></div>
+            </div>
+          </article>
+          <!-- Card 3 -->
+          <article class="ba-card reveal" data-delay="2">
+            <div class="ba-card__frame">
+              <div class="ba-half ba-half--before"><span>Before</span></div>
+              <div class="ba-half ba-half--after"><span>After</span></div>
+            </div>
+            <div class="ba-card__body">
+              <h4>Fairing Set · Race Livery</h4>
+              <p>Blank plastics turned into a full sponsor-style race livery.</p>
+              <div class="ba-card__tags"><span class="tag">Fairings</span><span class="tag">Livery</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHY MOTORCYCLE WRAPS ============ -->
+    <section class="section statement" id="why">
+      <div class="container">
+        <p class="eyebrow reveal">Why motorcycle wraps</p>
+        <h2 class="statement__big reveal" data-delay="1">
+          Riders don't want a color change. They want their bike to feel like <em>theirs.</em>
+        </h2>
+
+        <div class="statement__cols">
+          <div class="reveal"><h4>Identity</h4><p>Your bike is the first thing that tells the world how you ride. A wrap makes that statement on purpose instead of by accident.</p></div>
+          <div class="reveal" data-delay="1"><h4>A second life</h4><p>Sun-faded plastics and tired paint don't mean the bike is done. Vinyl gives an older machine a whole new chapter.</p></div>
+          <div class="reveal" data-delay="2"><h4>Rolling art</h4><p>It's protection you can see. A finish you chose, applied by hand, that turns a commute into a moving piece of you.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WRAP SERVICES PREVIEW ============ -->
+    <section class="section" id="services-preview">
+      <div class="container">
+        <div class="section-head section-head--split reveal">
+          <div class="section-head__copy">
+            <span class="eyebrow">What I wrap</span>
+            <h2 class="section-title">Boutique studio.<br>Sportbike specific.</h2>
+          </div>
+          <a class="btn btn--ghost" href="services.html">See full services
+            <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+        <div class="grid grid--3">
+          <article class="svc-card reveal">
+            <div class="svc-card__ico"><svg viewBox="0 0 24 24" fill="none"><path d="M4 16l3-8h10l3 8M6 16h12M8 16v2M16 16v2M9 8V6h6v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h3>Full Sportbike Wrap</h3>
+            <p>Every panel, front to tail. The complete transformation, filmed end to end.</p>
+            <div class="svc-card__price">From $900<small>Labor</small></div>
+          </article>
+          <article class="svc-card reveal" data-delay="1">
+            <div class="svc-card__ico"><svg viewBox="0 0 24 24" fill="none"><path d="M3 12c3-4 15-4 18 0-3 4-15 4-18 0z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="2.2" stroke="currentColor" stroke-width="1.5"/></svg></div>
+            <h3>Fairing Set Wrap</h3>
+            <p>Upper, lowers, and mid panels reskinned for a full color change.</p>
+            <div class="svc-card__price">From $600<small>Labor</small></div>
+          </article>
+          <article class="svc-card reveal" data-delay="2">
+            <div class="svc-card__ico"><svg viewBox="0 0 24 24" fill="none"><path d="M6 14c0-3 2-6 6-6s6 3 6 6v3H6v-3z" stroke="currentColor" stroke-width="1.5"/><path d="M9 17v2M15 17v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+            <h3>Tank / Tail / Fender</h3>
+            <p>Accent a single piece — the fastest way to change a bike's whole mood.</p>
+            <div class="svc-card__price">From $150<small>Per piece</small></div>
+          </article>
+          <article class="svc-card reveal">
+            <div class="svc-card__ico"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M5 12h14" stroke="currentColor" stroke-width="1.5"/></svg></div>
+            <h3>Helmet / Small Parts</h3>
+            <p>Lids, hugger, levers, small trim. Detail work that ties a build together.</p>
+            <div class="svc-card__price">From $150<small>Labor</small></div>
+          </article>
+          <article class="svc-card reveal" data-delay="1">
+            <div class="svc-card__ico"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M10 9.5l4 2.5-4 2.5v-5z" fill="currentColor"/></svg></div>
+            <h3>Content Package Add-On</h3>
+            <p>Your build filmed and edited for a future episode — cinematic BTS + reveal.</p>
+            <div class="svc-card__price">Custom<small>Add-on</small></div>
+          </article>
+          <article class="svc-card reveal" data-delay="2" style="justify-content:center;align-items:flex-start;background:linear-gradient(180deg,#12190f,#0a0d0a);border-color:rgba(74,222,128,.3);">
+            <h3 style="margin-bottom:.8rem;">Not sure yet?</h3>
+            <p>Tell me the bike and the vibe. I'll help you figure out the right package.</p>
+            <a class="btn btn--primary" href="apply.html">Start a request</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FOUNDER / PERSONAL BRAND ============ -->
+    <section class="section section--tight" id="founder" style="background:var(--bg-2);border-block:1px solid var(--line);">
+      <div class="container">
+        <div class="founder">
+          <div class="founder__portrait reveal">
+            <span class="media-ph__tag">The builder</span>
+            <svg width="72" height="72" viewBox="0 0 24 24" fill="none" style="opacity:.4;margin-bottom:2rem;"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          </div>
+          <div class="founder__body reveal" data-delay="1">
+            <span class="eyebrow">Who's behind it</span>
+            <blockquote>I'm not an influencer.<br>I'm a <em>builder</em> who films the work.</blockquote>
+            <p>
+              I got into this the honest way — wanting the kind of freedom I saw pro skaters
+              and creators build for themselves. So I learned to make things: software,
+              then bikes, then video. The F4i became the first real chapter I could point
+              to and say, "I made that better with my own hands."
+            </p>
+            <p>
+              No fake luxury, no hustle-bro noise. Just a garage, a process, and a plan to
+              build a life I don't need a vacation from. If that resonates, follow along —
+              and if you trust me with your bike, even better.
+            </p>
+            <div class="founder__name">
+              <b>The Founder</b>
+              <span>Rider · Builder · Documenting it all</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA BAND ============ -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-band reveal">
+          <span class="eyebrow" style="justify-content:center;">Your bike, next</span>
+          <h2>Want your bike in a<br>future episode?</h2>
+          <p>Tell me about your machine and where you want to take it. If it's a fit, we'll
+          film the transformation and put your build on the channel.</p>
+          <a class="btn btn--primary btn--lg" href="apply.html">
+            Apply for a wrap
+            <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a class="brand" href="index.html">
+            <span class="brand__mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3L3 20h4l5-9 5 9h4L12 3z" fill="currentColor"/></svg></span>
+            <span>Apex Skin<br><small>STUDIO</small></span>
+          </a>
+          <p>A motorcycle media brand and boutique wrap studio. Building a life around
+          craft, discipline, creativity, and transformation. NYC · Jersey City · North Jersey.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.56 7.17c-.25-.9-.83-1.48-1.73-1.73C18.8 5.16 12 5.16 12 5.16s-6.8 0-7.83.28c-.9.25-1.48.83-1.73 1.73C2.16 8.2 2.16 12 2.16 12s0 3.8.28 4.83c.25.9.83 1.48 1.73 1.73 1.03.28 7.83.28 7.83.28s6.8 0 7.83-.28c.9-.25 1.48-.83 1.73-1.73.28-1.03.28-4.83.28-4.83s0-3.8-.28-4.83zM10 15V9l5.19 3L10 15z"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg></a>
+            <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 3c.3 2.3 1.7 3.9 4 4.2v3c-1.5 0-2.9-.4-4-1.2V15a6 6 0 11-6-6c.3 0 .7 0 1 .1v3.1a3 3 0 102 2.8V3h3z"/></svg></a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h5>Explore</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="watch.html">Watch</a></li>
+            <li><a href="services.html">Wrap Services</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h5>Get started</h5>
+          <ul>
+            <li><a href="apply.html">Apply for a wrap</a></li>
+            <li><a href="services.html#pricing">Pricing</a></li>
+            <li><a href="services.html#faq">FAQ</a></li>
+            <li><a href="watch.html#newsletter">Follow the journey</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>© <span id="year"></span> Apex Skin Studio — placeholder brand name.</span>
+        <span>Built in the garage. Filmed on the way.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="script.js"></script>
+</body>
+</html>
