@@ -57,25 +57,31 @@ python3 -m http.server 8000 --directory public
 ## Deploy (Cloudflare Workers)
 
 This site deploys as a [Cloudflare Worker with static assets](https://developers.cloudflare.com/workers/static-assets/).
+Deployment is handled by **Cloudflare's GitHub integration (Workers Builds)** —
+every push to `main` triggers a Cloudflare build and deploy automatically. There
+is no GitHub Actions workflow and no API token stored in GitHub; Cloudflare uses
+its own managed authorization once the repo is connected.
 
-### One-time Cloudflare setup
+### One-time connection (Cloudflare dashboard)
 
-1. Create a [Cloudflare API token](https://dash.cloudflare.com/profile/api-tokens) with **Workers Scripts: Edit** permission.
-2. Copy your [Account ID](https://developers.cloudflare.com/fundamentals/account/find-account-and-zone-ids/) from the Cloudflare dashboard.
-3. In GitHub → **Settings → Secrets and variables → Actions**, add:
-   - `CLOUDFLARE_API_TOKEN`
-   - `CLOUDFLARE_ACCOUNT_ID`
+1. Go to **Cloudflare dashboard → Workers & Pages → Create → Import a repository**.
+2. Authorize GitHub and select **`SWFTstudios/vinyl-wrap-proj`**.
+3. Confirm the build settings (Cloudflare reads `wrangler.jsonc`):
+   - **Production branch:** `main`
+   - **Deploy command:** `npx wrangler deploy` (default)
+   - **Build command:** leave empty — this is a static site with no build step
+   - **Root directory:** `/`
+4. Click **Deploy**. Cloudflare builds and publishes the Worker.
 
-### Automatic deploys
+After the first deploy, the live URL is
+**`https://vinyl-wrap-proj.<your-subdomain>.workers.dev`**. From then on, every
+push to `main` redeploys automatically. Attach a custom domain under
+**Workers & Pages → vinyl-wrap-proj → Settings → Domains & Routes**.
 
-Pushes to `main` run `.github/workflows/deploy.yml` and deploy via Wrangler.
-
-### Manual deploy
+### Manual / local deploy (optional)
 
 ```bash
 npm install
 npx wrangler login   # first time only
 npm run deploy
 ```
-
-After deploy, Wrangler prints the `*.workers.dev` URL. Attach a custom domain in the Cloudflare dashboard under **Workers & Pages → vinyl-wrap-proj → Settings → Domains & Routes**.
