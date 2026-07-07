@@ -1,20 +1,21 @@
 # Apex Skin Studio
 
-A cinematic, dark-mode website for a motorcycle vinyl-wrap **media brand +
-boutique wrap studio**. Documents the build/wrap journey of a 2002 Honda
-CBR600 F4i and converts riders into wrap inquiries.
+A cinematic, dark-mode website for a **boutique sportbike vinyl wrap studio**
+in NJ / NYC. Positions the business around solving rider problems — faded
+fairings, outdated OEM colors, and expensive repaints — with a documented,
+transparent wrap process.
 
-> "I'm building a life I don't need a vacation from."
+> "Your bike deserves a finish that matches how you ride."
 
 ## Pages
 
 | File | Purpose |
 |------|---------|
-| `index.html` | Home — hero, origin story, latest episode, the 5-step format, before/after, why-wraps, services preview, founder, CTA |
-| `watch.html` | Watch — featured series, episodes grid, BTS clips, build journal, newsletter |
+| `index.html` | Home — hero, problem/solution, proof video, process, before/after, why-wraps, services preview, studio promise, CTA |
+| `watch.html` | Watch — reference build series, episodes, BTS clips, process journal, newsletter |
 | `services.html` | Wrap Services — packages, process, what's included/not, pricing ranges, FAQ |
 | `apply.html` | Apply — interactive 7-step wrap-inquiry wizard with progress indicator + review/confirmation |
-| `about.html` | About — the personal story and mission |
+| `about.html` | About — the studio, what we solve, and how we work |
 
 ## Tech
 
@@ -22,7 +23,7 @@ CBR600 F4i and converts riders into wrap inquiries.
 - Mobile-first and fully responsive.
 - Smooth scroll, `IntersectionObserver` scroll-reveal, accordion FAQ, and a
   multi-step form wizard — all in `script.js`.
-- Fonts: Anton (display) + Inter (body) via Google Fonts, with system fallbacks.
+- Fonts: Arimo via Google Fonts, with system fallbacks.
 
 ## Placeholders to replace before launch
 
